@@ -23,6 +23,8 @@ public class User {
     @Transient
     private boolean isDummy = false;
 
+    @Embedded
+    private Address address;
 
     //참고로 하위의 getter, setter가 없어도 DB로 부터의 데이터 바인딩은 가능하다
     public Long getId() {
