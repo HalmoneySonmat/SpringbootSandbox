@@ -26,6 +26,9 @@ public class User {
     @Embedded
     private Address address;
 
+    @ManyToOne //주인이 이쪽, 지금 이 구문은 유저가 subject를 하나 소유한다는 뜻
+    private Subject subject;
+
     //참고로 하위의 getter, setter가 없어도 DB로 부터의 데이터 바인딩은 가능하다
     public Long getId() {
         return id;
